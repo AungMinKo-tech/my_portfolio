@@ -1,42 +1,6 @@
 (function() {
   "use strict";
-
-  /**
-   * Header toggle
-   */
-  const headerToggleBtn = document.querySelector('.header-toggle');
-
-  function headerToggle() {
-    document.querySelector('#header').classList.toggle('header-show');
-    headerToggleBtn.classList.toggle('bi-list');
-    headerToggleBtn.classList.toggle('bi-x');
-  }
-  headerToggleBtn.addEventListener('click', headerToggle);
-
-  /**
-   * Hide mobile nav on same-page/hash links
-   */
-  document.querySelectorAll('#navmenu a').forEach(navmenu => {
-    navmenu.addEventListener('click', () => {
-      if (document.querySelector('.header-show')) {
-        headerToggle();
-      }
-    });
-
-  });
-
-  /**
-   * Toggle mobile nav dropdowns
-   */
-  document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
-    navmenu.addEventListener('click', function(e) {
-      e.preventDefault();
-      this.parentNode.classList.toggle('active');
-      this.parentNode.nextElementSibling.classList.toggle('dropdown-active');
-      e.stopImmediatePropagation();
-    });
-  });
-
+  
   /**
    * Preloader
    */
@@ -46,6 +10,7 @@
       preloader.remove();
     });
   }
+
 
   /**
    * Scroll top button
@@ -219,3 +184,28 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+  document.querySelector('#homes').onclick = active;
+  document.querySelector('#abouts').onclick = active;
+  document.querySelector('#projects').onclick = active;
+  document.querySelector('#contacts').onclick = active;
+
+  function active() {
+    this.classList.add('active');
+    document.querySelectorAll('#homes, #abouts, #projects, #contacts').forEach(item => {
+      if (item !== this) {
+        item.classList.remove('active');
+      }
+    });
+  }
+
+    // Auto-close navbar on nav-link click (for mobile)
+  document.querySelectorAll('.navbar-nav .nav-link').forEach(function(link) {
+    link.addEventListener('click', function() {
+      var navbarCollapse = document.querySelector('.navbar-collapse');
+      if (navbarCollapse.classList.contains('show')) {
+        var bsCollapse = new bootstrap.Collapse(navbarCollapse, {toggle: false});
+        bsCollapse.hide();
+      }
+    });
+  });

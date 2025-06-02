@@ -19,45 +19,44 @@
     <!-- Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet">
 </head>
-<body class="index-page">
-  <header id="header" class="header dark-background d-flex flex-column">
-    <i class="header-toggle d-xl-none bi bi-list"></i>
-
-    <div class="profile-img">
-      <img src="assets/img/my-profile-img.jpg" alt="" class="img-fluid rounded-circle">
-    </div>
-
-    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
-      <!-- <img src="assets/img/logo.png" alt=""> -->
-      <h1 class="sitename">Aung Min Ko</h1>
-    </a>
-
-    <div class="social-links text-center">
-      <a href="https://www.facebook.com/profile.php?id=61571911991566" class="facebook"><i class="bi bi-facebook"></i></a>
-      <a href="https://www.linkedin.com/in/aung-min-ko-20b317346" class="linkedin"><i class="bi bi-linkedin"></i></a>
-      <a href="https://github.com/AungMinKo-tech" class="github"><i class="bi bi-github"></i></a>
-    </div>
-
-    <nav id="navmenu" class="navmenu">
-      <ul>
-        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
-        <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
-        <li><a href="#project"><i class="bi bi-images navicon"></i> Project</a></li>
-        <li><a href="#contact"><i class="bi bi-envelope navicon"></i>Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main class="main">
-    <!-- Hero Section -->
-    <section id="hero" class="hero section dark-background">
-      <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in" class="">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <h2 style="color: #8bc34a;">Aung Min Ko</h2>
-        <p>I'm <span class="typed" data-typed-items="Fullstack Web Developer(PHP/Laravel), Backend Developer, Laravel Developer" style="color: #00bcd4;"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+<body class="index-page" style="margin:0; padding:0; background:none;">
+  <!-- Bootstrap Navbar Start -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #343a40;">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+          <li class="nav-item me-3">
+            <a class="nav-link" id="homes" href="#hero"><i class="bi bi-house navicon"></i> Home</a>
+          </li>
+          <li class="nav-item me-3">
+            <a class="nav-link" id="abouts" href="#about"><i class="bi bi-person navicon"></i> About</a>
+          </li>
+          <li class="nav-item me-3">
+            <a class="nav-link" id="projects" href="#project"><i class="bi bi-images navicon"></i> Project</a>
+          </li>
+          <li class="nav-item me-3">
+            <a class="nav-link" id="contacts" href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a>
+          </li>
+        </ul>
       </div>
-    </section><!-- /Hero Section -->
+    </div>
+  </nav>
+  <!-- Bootstrap Navbar End -->
+
+  <main class="main"
+  style="margin-top: 56px; min-height: 100vh; background: #181818;">
+  <!-- Hero Section -->
+  <section id="hero" class="hero section light-background"
+    style="background: url('assets/img/hero-bg.jpg') no-repeat center center; background-size: cover;">
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <h2 style="color: #f8f8f8; text-shadow: 1px 1px 3px rgba(0, 0, 0, 6);">Aung Min Ko</h2>
+      <p style="color: #ffffff; font-weight: bold;">I'm <span class="typed" data-typed-items="Fullstack Web Developer(PHP/Laravel), Backend Developer, Laravel Developer" style="color: #00eaff;"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+      <a href="#" class="btn mt-3 text-white" style="background-color: #ff4b2b; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);">Download My Resume</a>
+    </div>
+  </section><!-- /Hero Section -->
 
     <!-- About Section -->
     <section id="about" class="about section">
@@ -95,6 +94,11 @@
             <p class="py-3" style="text-indent: 30px; text-align: justify;">
               I’m a Junior Full Stack Developer skilled in Vue.js, PHP and Laravel. I love building responsive UIs and robust backend systems. Eager to grow, learn and contribute to real-world projects.
             </p>
+            <div class="d-flex ms-lg-3">
+              <a href="https://www.facebook.com/profile.php?id=61571911991566" class="nav-link px-2 text-primary fs-1" target="_blank"><i class="bi bi-facebook"></i></a>
+              <a href="https://www.linkedin.com/in/aung-min-ko-20b317346" class="nav-link px-2 text-primary fs-1" target="_blank"><i class="bi bi-linkedin"></i></a>
+              <a href="https://github.com/AungMinKo-tech" class="nav-link px-2 text-dark fs-1" target="_blank"><i class="bi bi-github"></i></a>
+            </div>
           </div>
         </div>
       </div>
@@ -249,7 +253,7 @@
               <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
                 <i class="bi bi-telephone flex-shrink-0"></i>
                 <div>
-                  <h3>Call Us</h3>
+                  <h3>Call Me</h3>
                   <p><a href="tel: +95 925 249 4454" class="text-dark">+95 925 249 4454</a></p>
                 </div>
               </div><!-- End Info Item -->
@@ -257,7 +261,7 @@
               <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
                 <i class="bi bi-envelope flex-shrink-0"></i>
                 <div>
-                  <h3>Email Us</h3>
+                  <h3>Email</h3>
                   <p>aungminko951357@gmail.com</p>
                 </div>
               </div><!-- End Info Item -->
@@ -309,7 +313,9 @@
 
     <div class="container">
       <div class="credits">
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a href="https://themewagon.com">ThemeWagon</a>
+        <p class="text-center">
+          &copy; 2025 <strong><span>Aung Min Ko</span></strong>. All Rights Reserved
+        </p>
       </div>
     </div>
   </footer>
@@ -318,7 +324,7 @@
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Preloader -->
-  <div id="preloader"></div>
+  <!-- <div id="preloader"></div> -->
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

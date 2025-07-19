@@ -1,6 +1,6 @@
-(function() {
+(function () {
   "use strict";
-  
+
   /**
    * Preloader
    */
@@ -75,7 +75,7 @@
     new Waypoint({
       element: item,
       offset: '80%',
-      handler: function(direction) {
+      handler: function (direction) {
         let progress = item.querySelectorAll('.progress .progress-bar');
         progress.forEach(el => {
           el.style.width = el.getAttribute('aria-valuenow') + '%';
@@ -94,13 +94,13 @@
   /**
    * Init isotope layout and filters
    */
-  document.querySelectorAll('.isotope-layout').forEach(function(isotopeItem) {
+  document.querySelectorAll('.isotope-layout').forEach(function (isotopeItem) {
     let layout = isotopeItem.getAttribute('data-layout') ?? 'masonry';
     let filter = isotopeItem.getAttribute('data-default-filter') ?? '*';
     let sort = isotopeItem.getAttribute('data-sort') ?? 'original-order';
 
     let initIsotope;
-    imagesLoaded(isotopeItem.querySelector('.isotope-container'), function() {
+    imagesLoaded(isotopeItem.querySelector('.isotope-container'), function () {
       initIsotope = new Isotope(isotopeItem.querySelector('.isotope-container'), {
         itemSelector: '.isotope-item',
         layoutMode: layout,
@@ -109,8 +109,8 @@
       });
     });
 
-    isotopeItem.querySelectorAll('.isotope-filters li').forEach(function(filters) {
-      filters.addEventListener('click', function() {
+    isotopeItem.querySelectorAll('.isotope-filters li').forEach(function (filters) {
+      filters.addEventListener('click', function () {
         isotopeItem.querySelector('.isotope-filters .filter-active').classList.remove('filter-active');
         this.classList.add('filter-active');
         initIsotope.arrange({
@@ -128,7 +128,7 @@
    * Init swiper sliders
    */
   function initSwiper() {
-    document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
+    document.querySelectorAll(".init-swiper").forEach(function (swiperElement) {
       let config = JSON.parse(
         swiperElement.querySelector(".swiper-config").innerHTML.trim()
       );
@@ -146,7 +146,7 @@
   /**
    * Correct scrolling position upon page load for URLs containing hash links.
    */
-  window.addEventListener('load', function(e) {
+  window.addEventListener('load', function (e) {
     if (window.location.hash) {
       if (document.querySelector(window.location.hash)) {
         setTimeout(() => {
@@ -185,27 +185,27 @@
 
 })();
 
-  document.querySelector('#homes').onclick = active;
-  document.querySelector('#abouts').onclick = active;
-  document.querySelector('#projects').onclick = active;
-  document.querySelector('#contacts').onclick = active;
+document.querySelector('#homes').onclick = active;
+document.querySelector('#abouts').onclick = active;
+document.querySelector('#projects').onclick = active;
+document.querySelector('#contacts').onclick = active;
 
-  function active() {
-    this.classList.add('active');
-    document.querySelectorAll('#homes, #abouts, #projects, #contacts').forEach(item => {
-      if (item !== this) {
-        item.classList.remove('active');
-      }
-    });
-  }
-
-    // Auto-close navbar on nav-link click (for mobile)
-  document.querySelectorAll('.navbar-nav .nav-link').forEach(function(link) {
-    link.addEventListener('click', function() {
-      var navbarCollapse = document.querySelector('.navbar-collapse');
-      if (navbarCollapse.classList.contains('show')) {
-        var bsCollapse = new bootstrap.Collapse(navbarCollapse, {toggle: false});
-        bsCollapse.hide();
-      }
-    });
+function active() {
+  this.classList.add('active');
+  document.querySelectorAll('#homes, #abouts, #projects, #contacts').forEach(item => {
+    if (item !== this) {
+      item.classList.remove('active');
+    }
   });
+}
+
+// Auto-close navbar on nav-link click (for mobile)
+document.querySelectorAll('.navbar-nav .nav-link').forEach(function (link) {
+  link.addEventListener('click', function () {
+    var navbarCollapse = document.querySelector('.navbar-collapse');
+    if (navbarCollapse.classList.contains('show')) {
+      var bsCollapse = new bootstrap.Collapse(navbarCollapse, { toggle: false });
+      bsCollapse.hide();
+    }
+  });
+});

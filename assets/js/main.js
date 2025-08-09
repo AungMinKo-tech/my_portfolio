@@ -129,10 +129,25 @@
    */
   function initSwiper() {
     document.querySelectorAll(".init-swiper").forEach(function (swiperElement) {
-      let config = JSON.parse(
-        swiperElement.querySelector(".swiper-config").innerHTML.trim()
-      );
-
+      var configElement = swiperElement.querySelector(".swiper-config");
+      var slidesCount = swiperElement.querySelectorAll('.swiper-slide').length;
+      var loopMode = slidesCount > 1;
+      if (!configElement) {
+        new Swiper(swiperElement, {
+          loop: loopMode,
+          speed: 600,
+          autoplay: { delay: 5000 },
+          slidesPerView: "auto",
+          pagination: {
+            el: ".swiper-pagination",
+            type: "bullets",
+            clickable: true
+          }
+        });
+        return;
+      }
+      let config = JSON.parse(configElement.innerHTML.trim());
+      config.loop = loopMode;
       if (swiperElement.classList.contains("swiper-tab")) {
         initSwiperWithCustomPagination(swiperElement, config);
       } else {
@@ -185,10 +200,10 @@
 
 })();
 
-document.querySelector('#homes').onclick = active;
-document.querySelector('#abouts').onclick = active;
-document.querySelector('#projects').onclick = active;
-document.querySelector('#contacts').onclick = active;
+['homes', 'abouts', 'projects', 'contacts'].forEach(function (id) {
+  var el = document.querySelector('#' + id);
+  if (el) el.onclick = active;
+});
 
 function active() {
   this.classList.add('active');

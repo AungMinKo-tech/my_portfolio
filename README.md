@@ -37,9 +37,9 @@ Features: Product listing, cart, checkout, order, rating, comment, delivery, adm
 ---
 
 ##  Contact Me
-- Facebook: [Aiden Min](#https://www.facebook.com/profile.php?id=61571911991566&mibextid=wwXIfr&mibextid=wwXIfr)  
-- LinkedIn: [Aung Min Ko](#https://www.linkedin.com/in/aung-min-ko-20b317346)  
-- Email: aungminko951357@gmail.com  
+- Facebook: [Aiden Min](https://www.facebook.com/profile.php?id=61571911991566&mibextid=wwXIfr&mibextid=wwXIfr)  
+- LinkedIn: [Aung Min Ko](https://www.linkedin.com/in/aung-min-ko-20b317346)  
+- Email: aungminko951357@gmail.com
 
 ---
 

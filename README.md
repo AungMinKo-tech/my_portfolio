@@ -16,7 +16,7 @@ I am passionate about Web Development, Backend Systems.
 ##  Tech Stack
 - Languages: HTML, CSS, JavaScript, PHP, Java  
 - Frameworks: Laravel, Bootstrap, Vue.js  
-- Databases: MySQL, SQLite
+- Databases: MySQL, SQLite, PostgreSQL
 - Tools: Git, GitHub, VS Code, Postman
 
 ---
